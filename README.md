@@ -43,4 +43,4 @@ Las variables INOUT son valores que se pasan al procedimiento cuando se llama y 
       
 Podemos verlo así:
 
-CALL masalla(3);
+            CALL masalla(3);
