@@ -1,4 +1,4 @@
-# Procedimiento almacenados en PostgreSQL
+# Procedimientos almacenados en PostgreSQL
 
 Un procedimiento almacenado es un conjunto de instrucciones SQL que se pueden almacenar en la base de datos y ejecutar posteriormente.
 
