@@ -27,7 +27,7 @@ Los modos en los que utilizamos los parámetros determinan el comportamiento de 
     END;
     $$;
 
-    CALL mi_procedimiento(8, ?);   --OJO que en datagrip sale un prompt
+    CALL ejemploinoutnto(8, ?);   --OJO que en datagrip sale un prompt
     
 ## Un ejemplo más elaborado
 
