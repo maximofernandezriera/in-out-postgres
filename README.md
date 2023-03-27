@@ -29,6 +29,27 @@ Los modos en los que utilizamos los parámetros determinan el comportamiento de 
 
     CALL mi_procedimiento(8, ?);   --OJO que en datagrip sale un prompt
     
+## Un ejemplo más elaborado
+
+            CREATE OR REPLACE PROCEDURE suma(num1 IN int, num2 IN int, v_total OUT int)
+            LANGUAGE plpgsql
+            AS $$
+            BEGIN
+                v_total := num1 + num2;
+            END;
+            $$;
+
+            DO $$
+            DECLARE
+                v_num1 int := 5;
+                v_num2 int := 10;
+                v_total int := 0;
+            BEGIN
+                CALL suma(v_num1, v_num2, v_total);
+                RAISE NOTICE 'El total es %', v_total;
+            END;
+            $$;
+    
 # Un paso más allá INOUT
 
 Las variables INOUT son valores que se pasan al procedimiento cuando se llama y que también pueden ser modificados por el procedimiento y devueltos como resultado. Aquí tienes un ejemplo sencillo de un procedimiento que utiliza una variable INOUT:
